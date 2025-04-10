@@ -10,13 +10,14 @@ import org.springframework.stereotype.Service;
 public class userService implements serviceInterface<User, String> {
 
     @Autowired
-    private userRepositoryInterface repository;
+    private userRepositoryInterface userRepository;
 
-    public User create(User user){
-        return repository.save(user);
+    public User create(User user) {
+        return userRepository.save(user);
     }
 
     public Iterable<User> getAll() {
-        return repository.findAll();
+        return userRepository.findAll();
     }
+
 }
