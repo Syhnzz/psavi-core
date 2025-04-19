@@ -8,6 +8,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "USERNAME", nullable = false, length = 50, unique = true)
+    private String username;
     @Column(name = "NOM", nullable = false, length = 50)
     private String nom;
     @Column(name = "PRENOM", nullable = false, length = 50)
@@ -18,7 +20,7 @@ public class User {
     private String ville;
     @Column(name = "ADRESSE", nullable = false, length = 50)
     private String adresse;
-    @Column(name = "EMAIL", nullable = false, length = 50)
+    @Column(name = "EMAIL", nullable = false, length = 50, unique = true)
     private String email;
 
     @Column(name = "PASSWORD", nullable = false, length = 100)
@@ -34,6 +36,14 @@ public class User {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getNom() {

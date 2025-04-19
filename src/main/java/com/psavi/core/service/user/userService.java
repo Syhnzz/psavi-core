@@ -6,8 +6,10 @@ import com.psavi.core.service.serviceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
-public class userService implements serviceInterface<User, String> {
+public class userService implements serviceInterface<User, Integer> {
 
     @Autowired
     private userRepositoryInterface userRepository;
@@ -18,6 +20,15 @@ public class userService implements serviceInterface<User, String> {
 
     public Iterable<User> getAll() {
         return userRepository.findAll();
+    }
+
+    public User getById(Integer id) {
+        Optional<User> user = userRepository.findById(id);
+        return user.orElse(null);
+    }
+
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email).orElse(null);
     }
 
 }

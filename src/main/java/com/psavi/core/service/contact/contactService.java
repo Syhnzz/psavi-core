@@ -39,7 +39,6 @@ public class contactService {
             message.setText("Nom: " + userName + "\nEmail: " + userEmail + "\n\nMessage:\n" + messageContent);
 
             Transport.send(message);
-            System.out.println("Email de contact envoyé à destinataire@exemple.com");
 
         } catch (MessagingException e) {
             e.printStackTrace();
