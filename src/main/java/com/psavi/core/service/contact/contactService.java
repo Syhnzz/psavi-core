@@ -45,4 +45,5 @@ public class contactService {
             throw new RuntimeException("Erreur lors de l'envoi de l'e-mail", e);
         }
     }
+
 }

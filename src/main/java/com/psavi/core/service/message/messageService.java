@@ -7,6 +7,7 @@ import com.psavi.core.service.serviceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -27,5 +28,10 @@ public class messageService implements serviceInterface<Message, Integer> {
         Optional<Message> message = messageRepository.findById(id);
         return message.orElse(null);
     }
+
+    public List<Message> getByDiscussionId(Integer discussionId) {
+        return messageRepository.findByDiscussionIdOrderByDateEnvoiAsc(discussionId);
+    }
+
 
 }

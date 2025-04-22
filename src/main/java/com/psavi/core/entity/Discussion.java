@@ -1,5 +1,6 @@
 package com.psavi.core.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -20,7 +21,8 @@ public class Discussion {
 
     private LocalDateTime dateDernierMessage;
 
-    @OneToMany(mappedBy = "discussion", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "discussion", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
     private List<Message> messages;
 
     public Discussion() {

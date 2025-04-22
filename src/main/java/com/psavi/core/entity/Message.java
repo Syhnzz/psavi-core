@@ -1,5 +1,6 @@
 package com.psavi.core.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -21,6 +22,8 @@ public class Message {
     private User auteur;
 
     @ManyToOne
+    @JoinColumn(name = "DISCUSSION_ID")
+    @JsonBackReference
     private Discussion discussion;
 
     public Message() {
