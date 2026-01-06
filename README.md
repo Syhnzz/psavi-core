@@ -54,7 +54,7 @@ Des tests unitaires permettent de valider le comportement du modèle métier
 et des repositories.
 
 Lancement des tests :
-```bash
+bash
 mvn test
 🔗 Intégration
 Le module PSAVI Core est utilisé par PSAVI Web, qui :
