@@ -20,14 +20,14 @@ aucun contrôleur, aucune API REST, aucune logique d’interface.
 
 ---
 
-## 🎯 Objectifs
+## Objectifs
 - Concevoir un **modèle métier cohérent et extensible**
 - Appliquer une **séparation claire des responsabilités**
 - Fournir une base backend réutilisable pour une application Spring Boot
 
 ---
 
-## 🛠 Technologies
+## Technologies
 - Java
 - Spring Framework
 - Spring Data JPA
@@ -36,33 +36,33 @@ aucun contrôleur, aucune API REST, aucune logique d’interface.
 
 ---
 
-## 🏗 Architecture
+## Architecture
 psavi-core ├── entity │   ├── User.java │   ├── Discussion.java │   └── Message.java └── repository ├── UserRepository.java ├── DiscussionRepository.java └── MessageRepository.java
 
 
 ---
 
-## 🧠 Modèle métier
+## Modèle métier
 - **User** : utilisateur de la plateforme
 - **Discussion** : fil d’échange entre utilisateurs
 - **Message** : message associé à une discussion
 
 ---
 
-## 🧪 Tests
+## Tests
 Des tests unitaires permettent de valider le comportement du modèle métier
 et des repositories.
 
 Lancement des tests :
 bash
 mvn test
-🔗 Intégration
+Intégration
 Le module PSAVI Core est utilisé par PSAVI Web, qui :
 implémente la persistance
 expose les API REST
 gère la sécurité et l’interface utilisateur
 
-💡 Ce que ce module démontre
+Ce que ce module démontre
 Capacité à concevoir un backend métier propre et découplé
 Bonne compréhension de la séparation des couches
 Mise en œuvre de bonnes pratiques Spring Data JPA
