@@ -62,10 +62,10 @@ implémente la persistance
 expose les API REST
 gère la sécurité et l’interface utilisateur
 
-Ce que ce module démontre
-Capacité à concevoir un backend métier propre et découplé
-Bonne compréhension de la séparation des couches
-Mise en œuvre de bonnes pratiques Spring Data JPA
+## Ce que ce module démontre
+- Capacité à concevoir un backend métier propre et découplé
+- Bonne compréhension de la séparation des couches
+- Mise en œuvre de bonnes pratiques Spring Data JPA
 
 
 ---
